@@ -14,9 +14,11 @@ export default class Title extends React.Component {
 
     componentDidMount(){
         const { text, style } = this.props;
+        console.log(text);
         this.setState({
-            text: text != null ? this.props.text : 'Input Title Here',
+            text: text != null  ? this.props.text : 'Input Title Here',
             style: style != null ? this.props.style : {
+                flex: 1,
                 color: 'white',
                 marginBottom: 15 
             }

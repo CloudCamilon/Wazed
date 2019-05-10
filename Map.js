@@ -28,40 +28,44 @@ export default class Help extends React.Component {
                   latitude: 14.558290,
                   longitude: 121.026330,
                 },
-                title: 'Azure9',
-                description: 'House Always Wins',
+                title: 'BDO Makati Zuellig Branch',
+                description: 'Unit 2, Ground Floor, Zuellig Building, Makati Avenue corner Paseo de Roxas, Makati, Metro Manila',
                 image: require('./assets/atm-icon.png'),
-                isFocus: false
+                isFocus: false,
+                grade: 'A'
               },
               {
                 coordinate: {
                   latitude: 14.5556,
                   longitude: 121.0251,
                 },
-                title: 'Tell Me Lies',
-                description: 'Tell me sweet little liess',
+                title: 'BDO Makati Peninsula Hotel',
+                description: 'Corner of Ayala and Makati Avenues, 1226, Makati, Metro Manila',
                 image: require('./assets/atm-icon.png'),
-                isFocus: false
+                isFocus: false,
+                grade: 'B'
               },
               {
                 coordinate: {
                   latitude: 14.5571,
                   longitude: 121.0230,
                 },
-                title: 'Joshua Graham',
-                description: 'Cant expect god to do all the work' ,
+                title: 'BDO Makati Ayala Triangle',
+                description: 'Makati Avenue, corner Ayala Ave, Makati, Metro Manila' ,
                 image: require('./assets/atm-icon.png'),
-                isFocus: false
+                isFocus: false,
+                grade: 'C'
               },
               {
                 coordinate: {
                   latitude: 14.5517,
                   longitude: 121.0273,
                 },
-                title: 'Languyin',
-                description: 'Autotelic' ,
+                title: 'BDO Makati Glorietta 5',
+                description: 'The Landmark Makati, Makati Ave, Makati, 1223 Metro Manila' ,
                 image: require('./assets/atm-icon.png'),
-                isFocus: false
+                isFocus: false,
+                grade: 'D'
               }
             ],
             mapStyle: [
@@ -348,6 +352,9 @@ export default class Help extends React.Component {
                           style={styles.card} 
                           key={index}
                           activeOpacity={0.5}
+                          onPress={() => this.props.navigation.navigate('Description',{
+                            marker: this.state.markers[index],
+                          })}
                         >
                           <Image
                             source={marker.image}

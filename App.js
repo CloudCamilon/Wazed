@@ -3,7 +3,8 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './Home.js';
 import HelpScreen from './Help.js';
 import ListScreen from './List.js';
-import MapScreen from './Map.js'
+import MapScreen from './Map.js';
+import DescriptionScreen from './Description.js'
 
 
 const AppNavigator = createStackNavigator(
@@ -11,7 +12,8 @@ const AppNavigator = createStackNavigator(
     Home: HomeScreen,
     Help: HelpScreen,
     List: ListScreen,
-    Map: MapScreen
+    Map: MapScreen,
+    Description: DescriptionScreen
   },
   {    
     headerMode: 'none',
